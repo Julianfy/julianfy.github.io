@@ -4,7 +4,7 @@
   <title><![CDATA[Category: npm | 殷迦南的小记录]]></title>
   <link href="http://julianfy.github.io/blog/categories/npm/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-09T17:14:50+08:00</updated>
+  <updated>2017-06-09T17:20:07+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
     <name><![CDATA[殷迦南]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[qw4r24]]></title>
+    <link href="http://julianfy.github.io/blog/2017/06/09/nr12ds/"/>
+    <updated>2017-06-09T12:32:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/06/09/nr12ds</id>
+    <content type="html"><![CDATA[<p>131224343333
+测试速度</p>
+
+<pre><code>nrm test npm    //测试指定源
+nrm test        //测试所有源的响应时间
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[nrm 换源]]></title>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: beef | 殷迦南的小记录]]></title>
+  <link href="http://julianfy.github.io/blog/categories/beef/atom.xml" rel="self"/>
+  <link href="http://julianfy.github.io/"/>
+  <updated>2017-06-09T17:14:50+08:00</updated>
+  <id>http://julianfy.github.io/</id>
+  <author>
+    <name><![CDATA[殷迦南]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debian安装『BeEF xss』]]></title>
+    <link href="http://julianfy.github.io/blog/2015/12/12/install-beef/"/>
+    <updated>2015-12-12T14:19:21+08:00</updated>
+    <id>http://julianfy.github.io/blog/2015/12/12/install-beef</id>
+    <content type="html"><![CDATA[<p>　　在BeEF的<a href="https://github.com/beefproject/beef/wiki">wiki</a>上,安装的方法写的很详细，按照上面的方法来操作就可以~但是，前提是你得系统不受到我们亲爱的长城防火墙的影响，现在分享下我的安装过程~</p>
+
+<p>1、安装『git』和『curl』</p>
+
+<pre><code>apt-get update
+apt-get install curl git
+</code></pre>
+
+<p>2、安装rvm，通过rvm来安装ruby</p>
+
+<h6>提醒：安装rvm和ruby的时候不要用root账户</h6>
+
+<!--more-->
+
+
+<pre><code>curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable       //安装rvm
+source ~/.rvm/scripts/rvm       //激活rvm
+rvm install 2.1.5       //安装ruby 2.1.5版本
+rvm use 2.1.5 -- default        //设置2.1.5为默认版本
+</code></pre>
+
+<p>接着，我们就要安装bundler，但是蛋疼的问题就在这里,因为我们有伟大的长城~~</p>
+
+<h6>在此感谢马云，谢谢淘宝提供的<a href="https://ruby.taobao.org/">ruby国内镜像</a></h6>
+
+<p>我们现在来替换官方镜像</p>
+
+<pre><code>gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+</code></pre>
+
+<p>来看下是否替换成功~</p>
+
+<pre><code>gem sources -l
+</code></pre>
+
+<p>如果如下显示成功~~</p>
+
+<pre><code>*** CURRENT SOURCES ***
+https://ruby.taobao.org/
+</code></pre>
+
+<p>现在来通过gem安装 bundler</p>
+
+<pre><code>gem install bundler
+</code></pre>
+
+<p>3、下载BeEF XSS</p>
+
+<pre><code>git clone git://github.com/beefproject/beef.git /你要安装的目录/beef
+cd beef
+</code></pre>
+
+<p>在beef目录下，有个Gemfile的文件</p>
+
+<p>vi编辑器打开他~~</p>
+
+<pre><code>vi Gemfile
+</code></pre>
+
+<p>替换文件里ruby的官方网址为</p>
+
+<pre><code>https://ruby.taobao.org/
+</code></pre>
+
+<p>保存退出~~接着</p>
+
+<pre><code>bundle install
+ruby beef
+</code></pre>
+
+<p>至此，全部安装完成!</p>
+]]></content>
+  </entry>
+  
+</feed>

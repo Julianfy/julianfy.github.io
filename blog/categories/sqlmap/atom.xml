@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sqlmap | 殷迦南的小记录]]></title>
+  <link href="http://julianfy.github.io/blog/categories/sqlmap/atom.xml" rel="self"/>
+  <link href="http://julianfy.github.io/"/>
+  <updated>2017-06-09T17:14:50+08:00</updated>
+  <id>http://julianfy.github.io/</id>
+  <author>
+    <name><![CDATA[殷迦南]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debian安装『SQLmap』]]></title>
+    <link href="http://julianfy.github.io/blog/2015/12/12/install-sqlmap/"/>
+    <updated>2015-12-12T14:15:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2015/12/12/install-sqlmap</id>
+    <content type="html"><![CDATA[<h6>1、安装git</h6>
+
+<pre><code>apt-get install git 
+</code></pre>
+
+<h6>2、从github上克隆sqlmap到本地</h6>
+
+<p>github提供了两种地址，SSL和SSH，都可以使用，建议使用git~</p>
+
+<pre><code>地址1：
+https://github.com/sqlmapproject/sqlmap.git
+地址2：
+git@github.com:sqlmapproject/sqlmap.git
+</code></pre>
+
+<p>克隆命令：</p>
+
+<pre><code>git clone git@github.com:sqlmapproject/sqlmap.git /你要放sqlmap的目录路径
+</code></pre>
+
+<!--more-->
+
+
+<p>OK，搞定，安装完了，试试先~</p>
+
+<pre><code>cd /sqlmap的目录
+./sqlmap.py -h
+</code></pre>
+
+<p>不过这样的话，每次运行都要cd到sqlmap的目录下，稍稍有些麻烦~</p>
+
+<h6>3、建立快捷方式~</h6>
+
+<pre><code>ln -s /sqlmap路径/sqlmap.py /usr/bin/sqlmap
+</code></pre>
+
+<p>现在试下任意目录运行sqlmap吧~</p>
+
+<pre><code>sqlmap -h
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

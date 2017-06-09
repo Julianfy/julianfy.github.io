@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: npm | 殷迦南的小记录]]></title>
+  <link href="http://julianfy.github.io/blog/categories/npm/atom.xml" rel="self"/>
+  <link href="http://julianfy.github.io/"/>
+  <updated>2017-06-09T17:14:50+08:00</updated>
+  <id>http://julianfy.github.io/</id>
+  <author>
+    <name><![CDATA[殷迦南]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nrm 换源]]></title>
+    <link href="http://julianfy.github.io/blog/2017/06/07/nrm/"/>
+    <updated>2017-06-07T12:32:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/06/07/nrm</id>
+    <content type="html"><![CDATA[<h4>nrm 是一个 NPM 源管理器，允许你快速地在如下 NPM 源间切换</h4>
+
+<p>安装
+<code>
+sudo npm install -g nrm
+</code></p>
+
+<!--more-->
+
+
+<p>列出可选的源,带 * 的是当前使用的源，上面的输出表明当前源是官方源。
+<code>
+nrm ls
+</code></p>
+
+<p>切换</p>
+
+<pre><code>nrm use taobao
+</code></pre>
+
+<p>增加、删除源
+<code>
+nrm add  &lt;registry&gt; &lt;url&gt; [home]    //增加
+nrm del &lt;registry&gt;          //删除
+</code>
+测试速度</p>
+
+<pre><code>nrm test npm    //测试指定源
+nrm test        //测试所有源的响应时间
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

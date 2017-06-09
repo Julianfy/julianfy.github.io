@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lspci | 殷迦南的小记录]]></title>
+  <link href="http://julianfy.github.io/blog/categories/lspci/atom.xml" rel="self"/>
+  <link href="http://julianfy.github.io/"/>
+  <updated>2017-06-09T17:14:50+08:00</updated>
+  <id>http://julianfy.github.io/</id>
+  <author>
+    <name><![CDATA[殷迦南]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux scp命令]]></title>
+    <link href="http://julianfy.github.io/blog/2017/06/03/linux_scp/"/>
+    <updated>2017-06-03T15:40:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/06/03/linux_scp</id>
+    <content type="html"><![CDATA[<h4>语法</h4>
+
+<pre><code>scp [-1246BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+[-l limit] [-o ssh_option] [-P port] [-S program]
+[[user@]host1:]file1 [...] [[user@]host2:]file2
+</code></pre>
+
+<!--more-->
+
+
+<h4>简写</h4>
+
+<pre><code>scp [可选参数] file_source file_target 
+</code></pre>
+
+<ul>
+<li>-1： 强制scp命令使用协议ssh1</li>
+<li>-2： 强制scp命令使用协议ssh2</li>
+<li>-4： 强制scp命令只使用IPv4寻址</li>
+<li>-6： 强制scp命令只使用IPv6寻址</li>
+<li>-B： 使用批处理模式（传输过程中不询问传输口令或短语）</li>
+<li>-C： 允许压缩。（将* -C标志传递给ssh，从而打开压缩功能）</li>
+<li>-p：保留原文件的修改时间，访问时间和访问权限。</li>
+<li>-q： 不显示传输进度条。</li>
+<li>-r： 递归复制整个目录。</li>
+<li>-v：详细方式显示输出。scp和ssh(1)会显示出整个过程的调试信息。这些信息用于调试连接，验证和配置问题。</li>
+<li>-c cipher： 以cipher将数据传输进行加密，这个选项将直接传递给ssh。</li>
+<li>-F ssh_config： 指定一个替代的ssh配置文件，此参数直接传递给ssh。</li>
+<li>-i identity_file： 从指定文件中读取传输时使用的密钥文件，此参数直接传递给ssh。</li>
+<li>-l limit： 限定用户所能使用的带宽，以Kbit/s为单位。</li>
+<li>-o ssh_option： 如果习惯于使用ssh_config(5)中的参数传递方式，</li>
+<li>-P port：注意是大写的P, port是指定数据传输用到的端口号</li>
+<li>-S program： 指定加密传输时所使用的程序。此程序必须能够理解ssh(1)的选项。</li>
+</ul>
+
+
+<h4>从本地复制到远程</h4>
+
+<pre><code>scp local_file remote_username@remote_ip:remote_folder 
+</code></pre>
+
+<p>或者
+<code>
+scp local_file remote_username@remote_ip:remote_file
+</code>
+或者
+<code>
+scp local_file remote_ip:remote_folder
+</code>
+或者
+<code>
+scp local_file remote_ip:remote_file
+</code></p>
+
+<h4>复制目录命令格式</h4>
+
+<pre><code>scp -r local_folder remote_username@remote_ip:remote_folder 
+</code></pre>
+
+<p>或者
+<code>
+scp -r local_folder remote_ip:remote_folder
+</code></p>
+
+<h4>从远程复制到本地</h4>
+
+<pre><code>scp root@blog.ibfpig.top:/home/root/others/music /home/space/music/1.mp3 
+scp -r blog.ibfpig.top:/home/root/others/ /home/space/music/
+</code></pre>
+
+<h4>scp命令使用端口号 4588</h4>
+
+<pre><code>scp -p 4588 remote@blog.ibfpig.top:/usr/local/sin.sh /home/administrator
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Centos 安装安全狗的时候提示lspci]]></title>
+    <link href="http://julianfy.github.io/blog/2017/05/31/lspci/"/>
+    <updated>2017-05-31T07:15:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/05/31/lspci</id>
+    <content type="html"><![CDATA[<h2>lspci缺失</h2>
+
+<h4>安装安全狗的时候提示lspci没有，特此记录</h4>
+
+<pre><code>yum -y install pciutils
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

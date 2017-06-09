@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[殷迦南的小记录]]></title>
+  <link href="http://julianfy.github.io/atom.xml" rel="self"/>
+  <link href="http://julianfy.github.io/"/>
+  <updated>2017-06-09T17:14:50+08:00</updated>
+  <id>http://julianfy.github.io/</id>
+  <author>
+    <name><![CDATA[殷迦南]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nrm 换源]]></title>
+    <link href="http://julianfy.github.io/blog/2017/06/07/nrm/"/>
+    <updated>2017-06-07T12:32:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/06/07/nrm</id>
+    <content type="html"><![CDATA[<h4>nrm 是一个 NPM 源管理器，允许你快速地在如下 NPM 源间切换</h4>
+
+<p>安装</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo npm install -g nrm</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>列出可选的源,带 * 的是当前使用的源，上面的输出表明当前源是官方源。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nrm ls </span></code></pre></td></tr></table></div></figure>
+
+
+<p>切换</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nrm use taobao</span></code></pre></td></tr></table></div></figure>
+
+
+<p>增加、删除源</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nrm add  &lt;registry&gt; &lt;url&gt; [home] //增加
+</span><span class='line'>nrm del &lt;registry&gt;          //删除</span></code></pre></td></tr></table></div></figure>
+
+
+<p>测试速度</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nrm test npm //测试指定源
+</span><span class='line'>nrm test      //测试所有源的响应时间</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux scp命令]]></title>
+    <link href="http://julianfy.github.io/blog/2017/06/03/linux_scp/"/>
+    <updated>2017-06-03T15:40:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/06/03/linux_scp</id>
+    <content type="html"><![CDATA[<h4>语法</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp [-1246BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+</span><span class='line'>[-l limit] [-o ssh_option] [-P port] [-S program]
+</span><span class='line'>[[user@]host1:]file1 [...] [[user@]host2:]file2</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<h4>简写</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp [可选参数] file_source file_target </span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>-1： 强制scp命令使用协议ssh1</li>
+<li>-2： 强制scp命令使用协议ssh2</li>
+<li>-4： 强制scp命令只使用IPv4寻址</li>
+<li>-6： 强制scp命令只使用IPv6寻址</li>
+<li>-B： 使用批处理模式（传输过程中不询问传输口令或短语）</li>
+<li>-C： 允许压缩。（将* -C标志传递给ssh，从而打开压缩功能）</li>
+<li>-p：保留原文件的修改时间，访问时间和访问权限。</li>
+<li>-q： 不显示传输进度条。</li>
+<li>-r： 递归复制整个目录。</li>
+<li>-v：详细方式显示输出。scp和ssh(1)会显示出整个过程的调试信息。这些信息用于调试连接，验证和配置问题。</li>
+<li>-c cipher： 以cipher将数据传输进行加密，这个选项将直接传递给ssh。</li>
+<li>-F ssh_config： 指定一个替代的ssh配置文件，此参数直接传递给ssh。</li>
+<li>-i identity_file： 从指定文件中读取传输时使用的密钥文件，此参数直接传递给ssh。</li>
+<li>-l limit： 限定用户所能使用的带宽，以Kbit/s为单位。</li>
+<li>-o ssh_option： 如果习惯于使用ssh_config(5)中的参数传递方式，</li>
+<li>-P port：注意是大写的P, port是指定数据传输用到的端口号</li>
+<li>-S program： 指定加密传输时所使用的程序。此程序必须能够理解ssh(1)的选项。</li>
+</ul>
+
+
+<h4>从本地复制到远程</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp local_file remote_username@remote_ip:remote_folder </span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp local_file remote_username@remote_ip:remote_file </span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp local_file remote_ip:remote_folder </span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp local_file remote_ip:remote_file </span></code></pre></td></tr></table></div></figure>
+
+
+<h4>复制目录命令格式</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp -r local_folder remote_username@remote_ip:remote_folder </span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp -r local_folder remote_ip:remote_folder </span></code></pre></td></tr></table></div></figure>
+
+
+<h4>从远程复制到本地</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp root@blog.ibfpig.top:/home/root/others/music /home/space/music/1.mp3 
+</span><span class='line'>scp -r blog.ibfpig.top:/home/root/others/ /home/space/music/</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>scp命令使用端口号 4588</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scp -p 4588 remote@blog.ibfpig.top:/usr/local/sin.sh /home/administrator</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Centos 安装安全狗的时候提示lspci]]></title>
+    <link href="http://julianfy.github.io/blog/2017/05/31/lspci/"/>
+    <updated>2017-05-31T07:15:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2017/05/31/lspci</id>
+    <content type="html"><![CDATA[<h2>lspci缺失</h2>
+
+<h4>安装安全狗的时候提示lspci没有，特此记录</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum -y install pciutils</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debian安装『BeEF xss』]]></title>
+    <link href="http://julianfy.github.io/blog/2015/12/12/install-beef/"/>
+    <updated>2015-12-12T14:19:21+08:00</updated>
+    <id>http://julianfy.github.io/blog/2015/12/12/install-beef</id>
+    <content type="html"><![CDATA[<p>　　在BeEF的<a href="https://github.com/beefproject/beef/wiki">wiki</a>上,安装的方法写的很详细，按照上面的方法来操作就可以~但是，前提是你得系统不受到我们亲爱的长城防火墙的影响，现在分享下我的安装过程~</p>
+
+<p>1、安装『git』和『curl』</p>
+
+<pre><code>apt-get update
+apt-get install curl git
+</code></pre>
+
+<p>2、安装rvm，通过rvm来安装ruby</p>
+
+<h6>提醒：安装rvm和ruby的时候不要用root账户</h6>
+
+<!--more-->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable        //安装rvm
+</span><span class='line'>source ~/.rvm/scripts/rvm     //激活rvm
+</span><span class='line'>rvm install 2.1.5     //安装ruby 2.1.5版本
+</span><span class='line'>rvm use 2.1.5 -- default      //设置2.1.5为默认版本</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+接着，我们就要安装bundler，但是蛋疼的问题就在这里,因为我们有伟大的长城~~</p>
+
+<h6>在此感谢马云，谢谢淘宝提供的<a href="https://ruby.taobao.org/">ruby国内镜像</a></h6>
+
+<p>我们现在来替换官方镜像</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>来看下是否替换成功~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem sources -l</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果如下显示成功~~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** CURRENT SOURCES ***
+</span><span class='line'>https://ruby.taobao.org/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在来通过gem安装 bundler</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3、下载BeEF XSS</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/beefproject/beef.git /你要安装的目录/beef
+</span><span class='line'>cd beef</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在beef目录下，有个Gemfile的文件</p>
+
+<p>vi编辑器打开他~~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vi Gemfile</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <br/>
+替换文件里ruby的官方网址为</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://ruby.taobao.org/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>保存退出~~接着</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install
+</span><span class='line'>ruby beef</span></code></pre></td></tr></table></div></figure>
+
+
+<p>至此，全部安装完成!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debian安装『SQLmap』]]></title>
+    <link href="http://julianfy.github.io/blog/2015/12/12/install-sqlmap/"/>
+    <updated>2015-12-12T14:15:05+08:00</updated>
+    <id>http://julianfy.github.io/blog/2015/12/12/install-sqlmap</id>
+    <content type="html"><![CDATA[<h6>1、安装git</h6>
+
+<pre><code>apt-get install git 
+</code></pre>
+
+<h6>2、从github上克隆sqlmap到本地</h6>
+
+<p>github提供了两种地址，SSL和SSH，都可以使用，建议使用git~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>地址1：
+</span><span class='line'>https://github.com/sqlmapproject/sqlmap.git
+</span><span class='line'>地址2：
+</span><span class='line'>git@github.com:sqlmapproject/sqlmap.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>克隆命令：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git@github.com:sqlmapproject/sqlmap.git /你要放sqlmap的目录路径</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!--more-->
+
+
+<p>OK，搞定，安装完了，试试先~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /sqlmap的目录
+</span><span class='line'>./sqlmap.py -h</span></code></pre></td></tr></table></div></figure>
+
+
+<p>不过这样的话，每次运行都要cd到sqlmap的目录下，稍稍有些麻烦~</p>
+
+<h6>3、建立快捷方式~</h6>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ln -s /sqlmap路径/sqlmap.py /usr/bin/sqlmap</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在试下任意目录运行sqlmap吧~</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sqlmap -h</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[树莓派vim代码高亮]]></title>
+    <link href="http://julianfy.github.io/blog/2015/12/07/rpi-vim/"/>
+    <updated>2015-12-07T19:22:04+08:00</updated>
+    <id>http://julianfy.github.io/blog/2015/12/07/rpi-vim</id>
+    <content type="html"><![CDATA[<p>默认树莓派没有安装vim，执行下面命令安装之</p>
+
+<pre><code>sudo apt-get install -y vim
+</code></pre>
+
+<p>安装好之后就可以使用vi或者vim进行编辑操作，但是没有代码高亮显示。</p>
+
+<!--more-->
+
+
+<p>在~目录下面新建.vimrc文件可以实现</p>
+
+<pre><code>pi@raspberrypi ~ $ cd ~
+
+pi@raspberrypi ~ $ vim .vimrc
+</code></pre>
+
+<p>在.vimrc文件中插入以下代码：</p>
+
+<pre><code>set nu
+syntax on
+set tabstop=4
+</code></pre>
+
+<p>再试试vim，看看是不是就有代码高亮了呢~</p>
+]]></content>
+  </entry>
+  
+</feed>

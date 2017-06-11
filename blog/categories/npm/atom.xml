@@ -4,7 +4,7 @@
   <title><![CDATA[Category: npm | Julianfy~~~小记录]]></title>
   <link href="http://julianfy.github.io/blog/categories/npm/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-11T16:53:08+08:00</updated>
+  <updated>2017-06-11T16:55:28+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
     <name><![CDATA[Julianfy]]></name>
@@ -21,8 +21,8 @@
     <content type="html"><![CDATA[<p>敬请期待
 谢谢大家！</p>
 
-<pre><code>nrm test npm    //测试指定源
-nrm test        //测试所有源的响应时间
+<pre><code>敬请期待    //测试指定源
+敬请期待        //测试所有源的响应时间
 </code></pre>
 ]]></content>
   </entry>

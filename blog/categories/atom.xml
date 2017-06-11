@@ -4,7 +4,7 @@
   <title><![CDATA[Julianfy~~~小记录]]></title>
   <link href="http://julianfy.github.io/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-11T16:53:08+08:00</updated>
+  <updated>2017-06-11T16:55:28+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
     <name><![CDATA[Julianfy]]></name>
@@ -23,8 +23,8 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>nrm test npm //测试指定源
-</span><span class='line'>nrm test      //测试所有源的响应时间</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>敬请期待 //测试指定源
+</span><span class='line'>敬请期待      //测试所有源的响应时间</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

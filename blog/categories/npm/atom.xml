@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: npm | 殷迦南的小记录]]></title>
+  <title><![CDATA[Category: npm | Julianfy~~~小记录]]></title>
   <link href="http://julianfy.github.io/blog/categories/npm/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-09T17:20:07+08:00</updated>
+  <updated>2017-06-11T16:45:55+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
-    <name><![CDATA[殷迦南]]></name>
+    <name><![CDATA[Julianfy]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>

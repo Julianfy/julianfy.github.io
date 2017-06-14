@@ -4,7 +4,7 @@
   <title><![CDATA[Julianfy~~~小记录]]></title>
   <link href="http://julianfy.github.io/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-11T17:00:27+08:00</updated>
+  <updated>2017-06-14T10:35:52+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
     <name><![CDATA[Julianfy]]></name>
@@ -30,7 +30,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[nrm 换源]]></title>
+    <title type="html"><![CDATA[Nrm 换源]]></title>
     <link href="http://julianfy.github.io/blog/2017/06/07/nrm/"/>
     <updated>2017-06-07T12:32:05+08:00</updated>
     <id>http://julianfy.github.io/blog/2017/06/07/nrm</id>
@@ -76,7 +76,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Linux scp命令]]></title>
+    <title type="html"><![CDATA[Linux Scp命令]]></title>
     <link href="http://julianfy.github.io/blog/2017/06/03/linux_scp/"/>
     <updated>2017-06-03T15:40:05+08:00</updated>
     <id>http://julianfy.github.io/blog/2017/06/03/linux_scp</id>
@@ -188,7 +188,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Debian安装『BeEF xss』]]></title>
+    <title type="html"><![CDATA[Debian安装『BeEF Xss』]]></title>
     <link href="http://julianfy.github.io/blog/2015/12/12/install-beef/"/>
     <updated>2015-12-12T14:19:21+08:00</updated>
     <id>http://julianfy.github.io/blog/2015/12/12/install-beef</id>

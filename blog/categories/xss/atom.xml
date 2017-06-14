@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: xss | Julianfy~~~小记录]]></title>
+  <title><![CDATA[Category: xss | Julianfy~~~]]></title>
   <link href="http://julianfy.github.io/blog/categories/xss/atom.xml" rel="self"/>
   <link href="http://julianfy.github.io/"/>
-  <updated>2017-06-14T11:03:09+08:00</updated>
+  <updated>2017-06-14T11:05:45+08:00</updated>
   <id>http://julianfy.github.io/</id>
   <author>
     <name><![CDATA[Julianfy]]></name>
